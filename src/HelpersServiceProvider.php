@@ -3,7 +3,6 @@
 namespace Brunocfalcao\Helpers;
 
 use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
 class HelpersServiceProvider extends ServiceProvider
