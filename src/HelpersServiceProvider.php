@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
-class HelpersServiceProvider extends ServiceProvider
+final class HelpersServiceProvider extends ServiceProvider
 {
     public function boot()
     {
@@ -25,10 +25,6 @@ class HelpersServiceProvider extends ServiceProvider
                   ->each(function ($macro, $path) {
                       require_once $path;
                   });
-    }
-
-    public function register()
-    {
     }
 
     protected function bootBladeDirectives()
@@ -51,5 +47,9 @@ class HelpersServiceProvider extends ServiceProvider
         Blade::directive('endpushonce', function ($expression) {
             return '<?php $__env->stopPush(); endif; ?>';
         });
+    }
+
+    public function register()
+    {
     }
 }
