@@ -35,6 +35,13 @@ final class HelpersServiceProvider extends ServiceProvider
             }
         });
 
+        Blade::directive(
+            'fa',
+            function ($expression) {
+                return "<?php echo (new \\Brunocfalcao\\Helpers\\BladeDirectives\\Fa($expression))->render() ?>";
+            }
+        );
+
         Blade::if('env', function ($env) {
             return app()->environment($env);
         });
