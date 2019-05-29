@@ -9,7 +9,7 @@ class Fa
 
     public function __construct($icon = 'heart', $otherCss = '')
     {
-        list($this->icon, $this->otherCss) = [$icon, $otherCss];
+        [$this->icon, $this->otherCss] = [$icon, $otherCss];
     }
 
     public function render()
