@@ -1,6 +1,6 @@
 {
-    "name": "brunocfalcao/nova-helpers",
-    "description": "Generic Laravel Nova helpers for common web applications",
+    "name": "brunocfalcao/helpers",
+    "description": "Generic Laravel helpers for common web applications",
     "type": "library",
     "keywords": [
         "helpers",
@@ -9,7 +9,7 @@
         "framework",
         "php"
     ],
-    "homepage": "https://github.com/brunocfalcao/nova-helpers",
+    "homepage": "https://github.com/brunocfalcao/helpers",
     "license": "MIT",
     "authors": [
         {
@@ -28,12 +28,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Brunocfalcao\\NovaHelpers\\": "src"
+            "Brunocfalcao\\Helpers\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Brunocfalcao\\NovaHelpers\\Tests\\": "tests"
+            "Brunocfalcao\\Helpers\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -47,7 +47,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Brunocfalcao\\NovaHelpers\\NovaHelpersServiceProvider"
+                "Brunocfalcao\\Helpers\\HelpersServiceProvider"
             ]
         }
     }
