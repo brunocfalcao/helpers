@@ -4,8 +4,10 @@ use Illuminate\Support\Str;
 
 /*
  * Returns the string that matchest the longest FULL string from an array of strings.
+ *
  * @param array $haystack The strings array.
  * @param string $needle The string to match.
+ *
  * @return string|null The full longest string matched, or null in case there is no match.
  */
 Str::macro('longestMatch', function (array $haystack, string $needle) {
