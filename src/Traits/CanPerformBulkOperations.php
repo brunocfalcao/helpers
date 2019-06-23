@@ -18,7 +18,6 @@ trait CanPerformBulkOperations
         $createdModels = collect();
 
         collect($dataItems)->each(function ($dataItem) use (&$createdModels) {
-
             $model = new static;
 
             collect($dataItem)->each(function ($value, $key) use ($model, &$createdModels) {
