@@ -29,12 +29,20 @@ final class HelpersServiceProvider extends ServiceProvider
 
     protected function bootBladeDirectives()
     {
+        /**
+         * Renders only if the current route action name is equal to the specified.
+         * E.g: @action('create')  @endaction
+         */
         Blade::if('action', function ($action) {
             if (Route::getCurrentRoute()->getActionMethod() == $action) {
                 return $action;
             }
         });
 
+        /**
+         * Renders a fontawesome icon.
+         * E.g.: @fa('heart', 'othercss')
+         */
         Blade::directive(
             'fa',
             function ($expression) {
@@ -42,10 +50,17 @@ final class HelpersServiceProvider extends ServiceProvider
             }
         );
 
+        /**
+         * Renders only if the environment is the specified one.
+         * E.g.: @env('production')
+         */
         Blade::if('env', function ($env) {
             return app()->environment($env);
         });
 
+        /**
+         * Allows a push to be processed only once.
+         */
         Blade::directive('pushonce', function ($expression) {
             $var = '$__env->{"__pushonce_" . md5(__FILE__ . ":" . __LINE__)}';
 
