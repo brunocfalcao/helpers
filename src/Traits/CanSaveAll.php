@@ -2,7 +2,7 @@
 
 namespace Brunocfalcao\Helpers\Traits;
 
-trait CanPerformBulkOperations
+trait canSaveAll
 {
     /**
      * Saves all given items in the respective model.
