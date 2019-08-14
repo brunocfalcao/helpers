@@ -40,6 +40,16 @@ final class HelpersServiceProvider extends ServiceProvider
         });
 
         /*
+         * Renders only if the current route name is equal to the specified.
+         * E.g: @routename('welcome')  @routename
+         */
+        Blade::if('routename', function ($routeName) {
+            if (Route::getCurrentRoute()->getName() == $routeName) {
+                return $routeName;
+            }
+        });
+
+        /*
          * Renders a fontawesome icon.
          * E.g.: @fa('heart', 'othercss')
          */
