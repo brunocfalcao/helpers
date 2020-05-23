@@ -20,7 +20,7 @@ trait CanSaveAll
         $createdModels = collect();
 
         //1 level deep? wrap it.
-        if (!is_array(optional($dataItems)[0])) {
+        if (! is_array(optional($dataItems)[0])) {
             $dataItems = Arr::wrap([$dataItems]);
         }
 
