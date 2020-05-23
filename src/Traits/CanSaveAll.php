@@ -2,6 +2,8 @@
 
 namespace Brunocfalcao\Helpers\Traits;
 
+use Illuminate\Support\Arr;
+
 trait CanSaveAll
 {
     /**
@@ -16,6 +18,11 @@ trait CanSaveAll
     public static function saveAll(array $dataItems)
     {
         $createdModels = collect();
+
+        //1 level deep? wrap it.
+        if (!is_array(optional($dataItems)[0])) {
+            $dataItems = Arr::wrap([$dataItems]);
+        }
 
         collect($dataItems)->each(function ($dataItem) use (&$createdModels) {
             $model = new static;
