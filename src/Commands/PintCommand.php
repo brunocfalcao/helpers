@@ -11,9 +11,9 @@ class ClearLogCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'clear:log';
+    protected $signature = 'artisan:pint';
 
-    protected $description = 'Clears laravel logs';
+    protected $description = 'Runs pint in an eloquent way';
 
     public function __construct()
     {
@@ -27,10 +27,7 @@ class ClearLogCommand extends Command
      */
     public function handle()
     {
-        file_put_contents(storage_path('logs/laravel.log'), '');
-
-        $this->info('Log cleaned. Filesize:'.filesize(storage_path('logs/laravel.log')));
-
+        //
         return 0;
     }
 }
