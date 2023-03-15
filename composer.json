@@ -23,7 +23,7 @@
         "php": "^8.1",
         "laravel/pint": "^1.5",
         "illuminate/support": "^10.0",
-        "imliam/laravel-blade-helper": "^1.4"
+        "brunocfalcao/laravel-blade-helper": "dev-master"
     },
     "autoload": {
         "psr-4": {
