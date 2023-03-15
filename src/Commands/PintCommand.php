@@ -4,7 +4,7 @@ namespace Brunocfalcao\Helpers\Commands;
 
 use Illuminate\Console\Command;
 
-class ClearLogCommand extends Command
+class PintCommand extends Command
 {
     /**
      * The name and signature of the console command.
