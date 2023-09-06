@@ -40,7 +40,7 @@ trait CanValidateEnvs
                         $this->envValidationMsg = '.env '.$key.' cannot be null / must exist';
                         $this->envValidated = false;
 
-                    // Collection value equals to env value?
+                        // Collection value equals to env value?
                     } elseif ($value == env($key)) {
                         $this->envValidationMsg = null;
                         $this->envValidated = true;

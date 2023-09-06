@@ -103,7 +103,7 @@ if (! function_exists('domain')) {
     {
         $pieces = parse_url($url ?? request()->getHost());
 
-        $domain = isset($pieces['host']) ? $pieces['host'] : $pieces['path'];
+        $domain = $pieces['host'] ?? $pieces['path'];
 
         // Quick check if domain is only one word without dots.
         if (! Str::contains($domain, '.')) {

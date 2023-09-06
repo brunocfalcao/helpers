@@ -12,7 +12,6 @@ trait CanSaveAll
      *
      * Returns the saved models collection.
      *
-     * @param  array  $dataItems
      * @return Collection|Model
      */
     public static function saveAll(array $dataItems)
